@@ -1,0 +1,83 @@
+@use '../utils/mixins';
+
+header {
+  height: 80px;
+
+  .header__container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    max-width: 1280px;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 14px;
+  }
+}
+
+.mobile__nav {
+  @include mixins.flexCenter;
+  background: rgba(9, 9, 9, 0.3);
+  backdrop-filter: blur(40px);
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  transition: all .5s ease-in-out;
+
+  @include mixins.forDesktop {
+    display: none;
+  }
+
+  .mobile__nav__list {
+
+    .mobile__nav__item {
+      list-style: none;
+      margin: 5px;
+
+      a {
+        display: block;
+        text-decoration: none;
+        padding: 15px;
+
+        strong {
+          margin-right: 12px;
+        }
+      }
+    }
+  }
+}
+
+// .mobile__nav--hidden {
+//   left: -100%;
+// }
+
+.desktop__nav {
+  display: none;
+
+  @include mixins.forDesktop {
+    @include mixins.flexCenter;
+    width: 650px;
+    height: 80px;
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+  }
+
+  .desktop__nav__list {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+
+    a {
+      font-size: 16px;
+      letter-spacing: 2.7px;
+      text-decoration: none;
+
+      &:hover {
+        border-bottom: 3px solid white;
+      }
+    }
+  }
+}

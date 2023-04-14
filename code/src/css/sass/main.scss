@@ -1,0 +1,19 @@
+// Utils
+@use './utils/reset';
+@use './utils/variables';
+@use './utils/fonts';
+@use './utils/helpers';
+@use './utils/mixins';
+
+
+// Components
+@use './components/headings';
+@use './components/buttons';
+@use './components/text';
+
+
+// Blocks
+@use './blocks/body';
+@use './blocks/header';
+@use './blocks/home';
+@use './blocks/main';

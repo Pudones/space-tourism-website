@@ -1,0 +1,55 @@
+@use './variables';
+
+.text-center {
+  text-align: center;
+}
+
+@each $sizeName, $size in variables.$sizes {
+  .pad#{$sizeName} {
+    padding: $size;
+  }
+}
+
+// Margin Top
+@each $sizeName, $size in variables.$sizes {
+  .mt#{$sizeName} {
+    margin-top: $size;
+  }
+}
+
+// Margin Bottom
+@each $sizeName, $size in variables.$sizes {
+  .mb#{$sizeName} {
+    margin-bottom: $size;
+  }
+}
+
+@each $fontName, $fontSize in variables.$fontSizes {
+  .#{$fontName} {
+    font-size: $fontSize;
+  }
+}
+
+// Specifics
+
+.blur {
+  filter: blur(10px);
+}
+
+.mb16 {
+  margin-bottom: 16px;
+}
+
+.pad24 {
+  padding: 24px;
+}
+
+// Text Colors
+.color-purple {
+  color: variables.$purple;
+}
+
+// Line Height
+.lh25 {
+  line-height: 25px;
+}

@@ -1,0 +1,32 @@
+@use '../utils/mixins';
+
+.btn__logo, .btn__hamburger, .btn__hamburger--close {
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn__hamburger {
+  @include mixins.forDesktop {
+    display: none;
+  }
+}
+
+.btn__logo, .btn__logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.btn__hamburger--close {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 48px;
+  height: 48px;
+
+  img {
+    width: 30px;
+    height: 30px;
+  }
+}

@@ -1,0 +1,17 @@
+@use '../utils/mixins';
+
+.home__body {
+  background-image: url(../../assets/home/background-home-mobile.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 100vh;
+
+  @include mixins.forTablet {
+    background-image: url(../../assets/home/background-home-tablet.jpg);
+  }
+
+  @include mixins.forDesktop {
+    background-image: url(../../assets/home/background-home-desktop.jpg);
+  }
+}
