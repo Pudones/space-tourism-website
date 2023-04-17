@@ -1,0 +1,61 @@
+@use '../utils' as u;
+
+
+.home__text {
+  width: 360px;
+  height: 320px;
+
+  @include u.forTablet {
+    width: 500px;
+    height: 400px;
+  }
+
+  @include u.forDesktop {
+    position: absolute;
+    top: 25%;
+    left: 0;
+  }
+}
+
+.explore__wrapper {
+  @include u.forDesktop {
+    @include u.flexCenter;
+    border-radius: 50%;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 65%;
+    top: 35%;
+    transition: .3s;
+
+    &:hover {
+      background: rgb(0, 0, 0, 0.5);
+    }
+  }
+
+  .explore {
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    color: u.$dark;
+    font-size: 20px;
+    font-family: 'Bellefair';
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    cursor: pointer;
+
+    @include u.forTablet {
+      width: 200px;
+      height: 200px;
+    }
+
+    @include u.forDesktop {
+      width: 250px;
+      height: 250px;
+      font-size: 32px;
+    }
+  }
+}

@@ -1,4 +1,4 @@
-@use '../utils/mixins';
+@use '../utils' as u;
 
 .home__body {
   background-image: url(../../assets/home/background-home-mobile.jpg);
@@ -7,11 +7,12 @@
   background-position: center center;
   min-height: 100vh;
 
-  @include mixins.forTablet {
+  @include u.forTablet {
     background-image: url(../../assets/home/background-home-tablet.jpg);
   }
 
-  @include mixins.forDesktop {
+  @include u.forDesktop {
     background-image: url(../../assets/home/background-home-desktop.jpg);
+    padding-top: 2vh;
   }
 }

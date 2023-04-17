@@ -1,0 +1,115 @@
+@use '../utils' as u;
+
+header {
+  height: 10vh;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 40px;
+  padding-right: 40px;
+
+  .header__container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    max-width: 1280px;
+    justify-content: space-between;
+    margin: 0 auto;
+
+    .header__line {
+      display: none;
+
+      @include u.forDesktop {
+        @include u.flexCenter;
+        position: relative;
+        height: 100%;
+        // Calc to get the parent width minus the logo and the desktop nav width, so nothing affects each other sizes.
+        width: calc(100% - 710px);
+        
+        .line {
+          position: absolute;
+          right: -20px;
+          width: 90%;
+          height: 1px;
+          background-color: white;
+          z-index: 2;
+          opacity: 0.25;
+        }
+      }
+    }
+  }
+}
+
+.mobile__nav {
+  @include u.flexCenter;
+  background: rgba(9, 9, 9, 0.3);
+  backdrop-filter: blur(40px);
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  transition: all .5s ease-in-out;
+
+  @include u.forDesktop {
+    display: none;
+  }
+
+  .mobile__nav__list {
+
+    .mobile__nav__item {
+      list-style: none;
+      margin: 5px;
+
+      a {
+        display: block;
+        text-decoration: none;
+        padding: 15px;
+
+        strong {
+          margin-right: 12px;
+        }
+      }
+    }
+  }
+}
+
+.desktop__nav {
+  // Mobile-first build, so the desktop nav starts with display none and appears when the screen gets bigger via media queries.
+  display: none;
+
+  @include u.forDesktop {
+    @include u.flexCenter;
+    width: 650px;
+    height: 80px;
+    padding: 5px;
+    background: rgba(101, 99, 99, 0.15);
+    backdrop-filter: blur(10px);
+  }
+
+  .desktop__nav__list {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    height: 100%;
+
+    a {
+      @include u.flexCenter;
+      gap: 5px;
+      font-size: 16px;
+      letter-spacing: 2.7px;
+      text-decoration: none;
+      height: 100%;
+      border: 3px solid transparent;
+      transition: .3s;
+
+      &:hover {
+        border-bottom: 3px solid rgba(255, 255, 255, 0.6);
+      }
+    }
+  }
+}
+
+.active__anchor.active__anchor.active__anchor {
+  border-bottom: 3px solid white;
+}

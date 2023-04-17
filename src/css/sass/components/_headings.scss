@@ -1,5 +1,4 @@
-@use '../utils/variables';
-@use '../utils/mixins';
+@use '../utils' as u;
 
 .heading1, .heading2, .heading3, .heading4 {
   font-family: 'Bellefair';
@@ -7,23 +6,23 @@
 }
 
 .heading1 {
-  font-size: variables.$fs150;
+  font-size: u.$fs150;
 }
 
 .heading2 {
   font-size: 80px;
 
-  @include mixins.forTablet {
+  @include u.forTablet {
     font-size: 150px;
   }
 }
 
 .heading3 {
-  font-size: variables.$fs56;
+  font-size: u.$fs56;
 }
 
 .heading4 {
-  font-size: variables.$fs32;
+  font-size: u.$fs32;
 }
 
 .heading5 {
@@ -31,7 +30,7 @@
   font-size: 16px;
   letter-spacing: 2.75px;
 
-  @include mixins.forTablet {
+  @include u.forTablet {
     font-size: 20px;
   }
 }

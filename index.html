@@ -8,6 +8,7 @@
   <title>Space Tourism</title>
   <link rel="stylesheet" href="./src/css/main.css">
   <link rel="shortcut icon" href="./assets/favicon-32x32.png" type="image/x-icon">
+  <script defer src="./src/js/nav-active.js"></script>
   <script defer src="./src/js/nav-menu.js"></script>
 </head>
 
@@ -15,6 +16,7 @@
 
   <header>
     <div class="header__container">
+
       <button class="btn__logo">
         <img src="./assets/shared/logo.svg" alt="Space Tourism Logo">
       </button>
@@ -22,6 +24,10 @@
       <button class="btn__hamburger">
         <img src="./assets/shared/icon-hamburger.svg" alt="Menu">
       </button>
+
+      <div class="header__line">
+        <div class="line"></div>
+      </div>
 
       <nav class="desktop__nav">
 
@@ -33,35 +39,35 @@
               HOME
             </a>
           </li>
-    
+
           <li class="desktop__nav__item">
             <a class="regular-text--condensed fs32" href="#">
               <strong>01</strong>
               DESTINATION
             </a>
           </li>
-    
+
           <li class="desktop__nav__item">
             <a class="regular-text--condensed fs32" href="#">
               <strong>02</strong>
               CREW
             </a>
           </li>
-    
+
           <li class="desktop__nav__item">
             <a class="regular-text--condensed fs32" href="#">
               <strong>03</strong>
               TECHNOLOGY
             </a>
           </li>
-    
+
         </ul>
       </nav>
 
     </div>
   </header>
 
-  <nav class="mobile__nav mobile__nav--hidden">
+  <nav class="mobile__nav">
 
     <button class="btn__hamburger--close">
       <img src="./assets/shared/icon-close.svg" alt="Fechar Menu">
@@ -115,9 +121,11 @@
           experience!</p>
       </div>
 
-      <div class="explore">
-        EXPLORE
-      </div>
+      <a href="#" class="explore__wrapper">
+        <p class="explore">
+          EXPLORE
+        </p>
+      </a>
 
     </div>
   </main>

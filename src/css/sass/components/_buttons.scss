@@ -1,4 +1,4 @@
-@use '../utils/mixins';
+@use '../utils' as u;
 
 .btn__logo, .btn__hamburger, .btn__hamburger--close {
   background: none;
@@ -8,14 +8,14 @@
 }
 
 .btn__hamburger {
-  @include mixins.forDesktop {
+  @include u.forDesktop {
     display: none;
   }
 }
 
-.btn__logo, .btn__logo img {
-  width: 40px;
-  height: 40px;
+.btn__logo {
+  width: 60px;
+  height: 60px;
 }
 
 .btn__hamburger--close {
