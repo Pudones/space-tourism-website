@@ -1,11 +1,19 @@
 @use '../utils' as u;
 
+body {
+  background-color: #121212;
+  min-height: 100vh;
+
+  @include u.forDesktop {
+    padding-top: 2vh;
+  }
+}
+
 .home__body {
   background-image: url(../../assets/home/background-home-mobile.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  min-height: 100vh;
 
   @include u.forTablet {
     background-image: url(../../assets/home/background-home-tablet.jpg);
@@ -13,6 +21,20 @@
 
   @include u.forDesktop {
     background-image: url(../../assets/home/background-home-desktop.jpg);
-    padding-top: 2vh;
+  }
+}
+
+.destination__body {
+  background-image: url(../../assets/destination/background-destination-mobile.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  @include u.forTablet {
+    background-image: url(../../assets/destination/background-destination-tablet.jpg);
+  }
+
+  @include u.forDesktop {
+    background-image: url(../../assets/destination/background-destination-desktop.jpg);
   }
 }

@@ -19,3 +19,23 @@
     }
   }
 }
+
+.destination__main {
+  @include u.flexCenter;
+  height: calc(100vh - 12vh);
+
+  .destination__main__container {
+    @include u.flexCenter--column;
+    position: relative;
+    justify-content: space-around;
+    height: calc(100vh - 10vh);
+    min-height: calc(100vh - 12vh);
+
+    @include u.forDesktop {
+      width: 100%;
+      max-width: 1280px;
+      height: calc(100vh - 12vh);
+      margin: 0 auto;
+    }
+  }
+}

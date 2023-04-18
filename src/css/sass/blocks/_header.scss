@@ -24,7 +24,7 @@ header {
         height: 100%;
         // Calc to get the parent width minus the logo and the desktop nav width, so nothing affects each other sizes.
         width: calc(100% - 710px);
-        
+
         .line {
           position: absolute;
           right: -20px;
@@ -50,6 +50,10 @@ header {
   top: 0;
   left: -100%;
   transition: all .5s ease-in-out;
+
+  @include u.forTablet {
+    display: none;
+  }
 
   @include u.forDesktop {
     display: none;
@@ -78,6 +82,18 @@ header {
   // Mobile-first build, so the desktop nav starts with display none and appears when the screen gets bigger via media queries.
   display: none;
 
+  @include u.forTablet {
+    @include u.flexCenter;
+    width: 600px;
+    height: 80px;
+    padding: 5px;
+    backdrop-filter: blur(10px);
+
+    .desktop__nav__link__num {
+      display: none;
+    }
+  }
+
   @include u.forDesktop {
     @include u.flexCenter;
     width: 650px;
@@ -85,6 +101,10 @@ header {
     padding: 5px;
     background: rgba(101, 99, 99, 0.15);
     backdrop-filter: blur(10px);
+
+    .desktop__nav__link__num {
+      display: block;
+    }
   }
 
   .desktop__nav__list {

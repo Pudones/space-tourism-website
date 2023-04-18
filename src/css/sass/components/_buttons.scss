@@ -8,12 +8,16 @@
 }
 
 .btn__hamburger {
+  @include u.forTablet {
+    display: none;
+  }
   @include u.forDesktop {
     display: none;
   }
 }
 
 .btn__logo {
+  @include u.flexCenter;
   width: 60px;
   height: 60px;
 }
