@@ -3,7 +3,7 @@
 
 .home__text {
   width: 360px;
-  height: 320px;
+  min-height: 320px;
 
   @include u.forTablet {
     width: 500px;
