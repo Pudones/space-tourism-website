@@ -1,7 +1,8 @@
 @use '../utils' as u;
 
 header {
-  height: 10vh;
+  @include u.flexCenter;
+  min-height: 10vh;
   max-width: 1280px;
   margin: 0 auto;
   padding-left: 40px;
@@ -9,10 +10,11 @@ header {
 
   .header__container {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     height: 100%;
+    width: 100%;
     max-width: 1280px;
-    justify-content: space-between;
     margin: 0 auto;
 
     .header__line {

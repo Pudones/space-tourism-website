@@ -1,0 +1,190 @@
+@use '../utils' as u;
+
+.destination__preview {
+  @include u.flexCenter--column;
+  margin-bottom: 25px;
+
+  @include u.forTablet {
+    margin-top: 50px;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 32px;
+    font-family: u.$barlowC;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 2.7px;
+    line-height: 19px;
+
+    @include u.forTablet {
+      position: absolute;
+      left: 20px;
+      top: 0;
+    }
+
+    @include u.forDesktop {
+      font-size: 28px;
+      position: absolute;
+      top: -70px;
+      left: 45px;
+    }
+
+    strong {
+      opacity: 0.5;
+      margin-right: 18px;
+    }
+  }
+
+  img {
+    width: 170px;
+    height: 170px;
+
+    @include u.forTablet {
+      width: 300px;
+      height: 300px;
+    }
+
+    @include u.forDesktop {
+      width: 445px;
+      height: 445px;
+    }
+  }
+}
+
+.destination__text__wrapper {
+
+  .destination__nav {
+    height: 30px;
+    width: 250px;
+    margin: 0 auto 20px auto;
+
+    @include u.forDesktop {
+      margin: 0 0 36px 0;
+    }
+
+    ul {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      list-style: none;
+      height: 100%;
+
+      li {
+        cursor: pointer;
+
+        button {
+          cursor: pointer;
+          background: none;
+          border: none;
+          font-family: u.$barlowC;
+          letter-spacing: 2.4px;
+        }
+      }
+    }
+  }
+
+  .destination__wrapper {
+    display: none;
+    height: 100%;
+
+    // Div w/ Main Text: System Name and Description
+    .destination__text {
+      text-align: center;
+      margin-bottom: 32px;
+
+      @include u.forTablet {
+        max-width: 570px;
+      }
+
+      @include u.forDesktop {
+        max-width: 445px;
+        text-align: left;
+      }
+
+      h2 {
+        font-family: u.$belle;
+        font-size: 56px;
+        font-weight: 400;
+
+        @include u.forTablet {
+          font-size: 80px;
+        }
+
+        @include u.forDesktop {
+          font-size: 100px;
+          margin-bottom: 14px;
+        }
+      }
+
+      p {
+        font-family: u.$barlow;
+        line-height: 25px;
+        color: u.$purple;
+        font-size: 16px;
+        margin-bottom: 32px;
+
+        @include u.forDesktop {
+          font-size: 18px;
+          line-height: 32px;
+          margin-bottom: 54px;
+        }
+      }
+
+      .destination__line {
+        width: 100%;
+        height: 1px;
+        background-color: #383B4B;
+      }
+    }
+
+    // Extra info: Distance and Est. Travel Time
+    .destination__more__info {
+      @include u.flexCenter--column;
+
+      @include u.forTablet {
+        flex-direction: row;
+      }
+
+      .destination__info__wrapper {
+        width: 220px;
+        margin-bottom: 32px;
+
+        h3 {
+          font-family: u.$barlowC;
+          font-weight: 400;
+          letter-spacing: 2.4px;
+          line-height: 17px;
+          text-align: center;
+          color: u.$purple;
+          margin-bottom: 12px;
+
+          @include u.forDesktop {
+            text-align: left;
+          }
+        }
+
+        p {
+          font-family: u.$belle;
+          font-weight: 400;
+          font-size: 32px;
+          line-height: 32px;
+          text-align: center;
+
+          @include u.forDesktop {
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Modifiers
+
+.destination--visible.destination--visible {
+  display: block;
+}
+.destination__nav--active {
+  border-bottom: 4px solid white;
+}

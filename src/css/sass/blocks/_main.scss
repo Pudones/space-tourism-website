@@ -2,13 +2,16 @@
 
 .home__main {
   @include u.flexCenter;
-  height: calc(100vh - 12vh);
+  min-height: calc(100vh - 12vh);
+
+  @include u.forLandscape--mobile {
+    padding: 20px;
+  }
 
   .home__main__container {
     @include u.flexCenter--column;
     position: relative;
     justify-content: space-around;
-    height: calc(100vh - 10vh);
     min-height: calc(100vh - 12vh);
 
     @include u.forDesktop {
@@ -22,19 +25,26 @@
 
 .destination__main {
   @include u.flexCenter;
-  height: calc(100vh - 12vh);
+  padding: 10px 24px 10px 24px;
+
+  @include u.forDesktop {
+    height: calc(100vh - 12vh);
+  }
 
   .destination__main__container {
     @include u.flexCenter--column;
     position: relative;
     justify-content: space-around;
-    height: calc(100vh - 10vh);
-    min-height: calc(100vh - 12vh);
+    width: 100%;
+
+    @include u.forDesktop {
+      display: flex;
+      flex-direction: row;
+    }
 
     @include u.forDesktop {
       width: 100%;
       max-width: 1280px;
-      height: calc(100vh - 12vh);
       margin: 0 auto;
     }
   }
