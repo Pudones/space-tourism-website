@@ -28,3 +28,10 @@
     @content;
   }
 } 
+
+@mixin rotateCenter {
+  animation-name: rotate-center;
+  animation-duration: 120s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}

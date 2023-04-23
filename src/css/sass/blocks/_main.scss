@@ -36,16 +36,16 @@
     position: relative;
     justify-content: space-around;
     width: 100%;
+    min-height: 88vh;
 
     @include u.forDesktop {
       display: flex;
       flex-direction: row;
-    }
-
-    @include u.forDesktop {
       width: 100%;
       max-width: 1280px;
       margin: 0 auto;
     }
+
+
   }
 }
