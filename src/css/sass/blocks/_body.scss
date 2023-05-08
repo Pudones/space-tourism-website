@@ -2,6 +2,7 @@
 
 body {
   background-color: #121212;
+  color: white;
   min-height: 100vh;
 
   @include u.forDesktop {
@@ -36,5 +37,21 @@ body {
 
   @include u.forDesktop {
     background-image: url(../../assets/destination/background-destination-desktop.jpg);
+  }
+}
+
+.crew__body {
+  background-image: url(../../assets/crew/background-crew-mobile.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  @include u.forTablet {
+    background-image: url(../../assets/crew/background-crew-tablet.jpg);
+  }
+
+  @include u.forDesktop {
+    background-image: url(../../assets/crew/background-crew-desktop.jpg);
+    position: relative;
   }
 }

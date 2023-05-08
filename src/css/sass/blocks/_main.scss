@@ -3,21 +3,20 @@
 .home__main {
   @include u.flexCenter;
   min-height: calc(100vh - 12vh);
-
-  @include u.forLandscape--mobile {
-    padding: 20px;
-  }
+  padding: 2rem;
 
   .home__main__container {
     @include u.flexCenter--column;
-    position: relative;
     justify-content: space-around;
-    min-height: calc(100vh - 12vh);
+    gap: 130px;
+
 
     @include u.forDesktop {
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-direction: row;
       width: 100%;
       max-width: 1280px;
-      height: calc(100vh - 12vh);
       margin: 0 auto;
     }
   }
@@ -25,18 +24,14 @@
 
 .destination__main {
   @include u.flexCenter;
-  padding: 10px 24px 10px 24px;
-
-  @include u.forDesktop {
-    height: calc(100vh - 12vh);
-  }
+  padding: 3rem 2.4rem;
+  min-height: 87vh;
+  position: relative;
 
   .destination__main__container {
     @include u.flexCenter--column;
-    position: relative;
     justify-content: space-around;
     width: 100%;
-    min-height: 88vh;
 
     @include u.forDesktop {
       display: flex;
@@ -45,7 +40,28 @@
       max-width: 1280px;
       margin: 0 auto;
     }
+  }
+}
 
+.crew__main {
+  @include u.flexCenter--column;
+  padding: 3rem 2.4rem;
+  min-height: calc(100vh - 12vh);
+  gap: 3rem;
 
+  .crew__main__container {
+    @include u.flexCenter--column;
+    width: 100%;
+
+    @include u.forTablet {
+      justify-content: flex-start;
+    }
+
+    @include u.forDesktop {
+      // position: relative;
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
   }
 }

@@ -22,34 +22,123 @@
     el.classList.add('destination--visible');
   }
 
+  handleMoonCard = () => {
+    destNavItem[0].classList.add('destination__nav--active');
+    destImage.src = "./assets/destination/image-moon.webp";
+    showCard(moonCard);
+  }
+
+  handleMarsCard = () => {
+    destNavItem[1].classList.add('destination__nav--active');
+    destImage.src = "./assets/destination/image-mars.webp";
+    showCard(marsCard);
+  }
+
+  handleEuropaCard = () => {
+    destNavItem[2].classList.add('destination__nav--active');
+    destImage.src = "./assets/destination/image-europa.webp";
+    showCard(europaCard);
+  }
+
+  handleTitanCard = () => {
+    destNavItem[3].classList.add('destination__nav--active');
+    destImage.src = "./assets/destination/image-titan.webp";
+    showCard(titanCard);
+  }
+
   destNavItem.forEach(el => el.addEventListener('click', () => {
-    if(el === destNavItem[0]) {
+    if (el === destNavItem[0]) {
       clearAllCards();
-      destNavItem[0].classList.add('destination__nav--active');
-      destImage.src = "./assets/destination/image-moon.webp";
-      showCard(moonCard);
+      handleMoonCard();
     }
 
-    if(el === destNavItem[1]) {
+    if (el === destNavItem[1]) {
       clearAllCards();
-      destNavItem[1].classList.add('destination__nav--active');
-      destImage.src = "./assets/destination/image-mars.webp";
-      showCard(marsCard);
+      handleMarsCard();
     }
 
-    if(el === destNavItem[2]) {
+    if (el === destNavItem[2]) {
       clearAllCards();
-      destNavItem[2].classList.add('destination__nav--active');
-      destImage.src = "./assets/destination/image-europa.webp";
-      showCard(europaCard);
+      handleEuropaCard();
     }
 
-    if(el === destNavItem[3]) {
+    if (el === destNavItem[3]) {
       clearAllCards();
-      destNavItem[3].classList.add('destination__nav--active');
-      destImage.src = "./assets/destination/image-titan.webp";
-      showCard(titanCard);
+      handleTitanCard();
     }
   }))
+
+  // // Swipe Handler
+
+  // let touchstartX = 0;
+  // let touchendX = 0;
+
+  // function checkDirection() {
+
+  //   // Swipe Left
+  //   if (touchendX < touchstartX) {
+
+  //     if (destNavItem[0].classList.contains('destination__nav--active')) {
+  //       clearAllCards();
+  //       handleMarsCard();
+  //       return;
+  //     }
+
+  //     if (destNavItem[1].classList.contains('destination__nav--active')) {
+  //       clearAllCards();
+  //       handleEuropaCard();
+  //       return;
+  //     }
+
+  //     if (destNavItem[2].classList.contains('destination__nav--active')) {
+  //       clearAllCards();
+  //       handleTitanCard();
+  //       return;
+  //     }
+
+  //     if (destNavItem[3].classList.contains('destination__nav--active')) {
+  //       clearAllCards();
+  //       handleMoonCard();
+  //       return;
+  //     }
+  //   }
+  //   // Swipe Right
+  //   if (touchendX > touchstartX) {
+  //     if (destNavItem[0].classList.contains('destination__nav--active')) {
+  //       clearAllCards();
+  //       handleTitanCard();
+  //       return;
+  //     }
+
+  //     if (destNavItem[1].classList.contains('destination__nav--active')) {
+  //       clearAllCards();
+  //       handleMoonCard();
+  //       return;
+  //     }
+
+  //     if (destNavItem[2].classList.contains('destination__nav--active')) {
+  //       clearAllCards();
+  //       handleMarsCard();
+  //       return;
+  //     }
+
+  //     if (destNavItem[3].classList.contains('destination__nav--active')) {
+  //       clearAllCards();
+  //       handleEuropaCard();
+  //       return;
+  //     }
+  //   }
+  // }
+
+  // document.addEventListener('touchstart', el => {
+  //   touchstartX = el.changedTouches[0].screenX;
+  //   console.log(touchstartX)
+  // })
+
+  // document.addEventListener('touchend', el => {
+  //   touchendX = el.changedTouches[0].screenX;
+  //   console.log(touchendX)
+  //   checkDirection();
+  // })
 
 })();

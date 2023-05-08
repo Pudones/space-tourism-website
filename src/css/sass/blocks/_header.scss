@@ -47,7 +47,7 @@ header {
   backdrop-filter: blur(40px);
   z-index: 1;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   position: absolute;
   top: 0;
   left: -100%;
@@ -62,15 +62,17 @@ header {
   }
 
   .mobile__nav__list {
+    
 
     .mobile__nav__item {
       list-style: none;
-      margin: 5px;
+      margin: .5rem;
 
       a {
+        color: white;
         display: block;
         text-decoration: none;
-        padding: 15px;
+        padding: 1.5rem;
 
         strong {
           margin-right: 12px;
@@ -81,7 +83,7 @@ header {
 }
 
 .desktop__nav {
-  // Mobile-first build, so the desktop nav starts with display none and appears when the screen gets bigger via media queries.
+  // Mobile-first build, so the 'desktop__nav' starts with display none and appears when the screen gets bigger via media queries.
   display: none;
 
   @include u.forTablet {
@@ -117,8 +119,9 @@ header {
 
     a {
       @include u.flexCenter;
+      color: white;
       gap: 5px;
-      font-size: 16px;
+      font-size: 1.6rem;
       letter-spacing: 2.7px;
       text-decoration: none;
       height: 100%;

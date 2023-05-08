@@ -9,25 +9,19 @@
   }
 
   h1 {
-    text-align: center;
-    margin-bottom: 32px;
-    font-family: u.$barlowC;
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: 2.7px;
-    line-height: 19px;
 
     @include u.forTablet {
       position: absolute;
-      left: 20px;
+      left: 2rem;
       top: 0;
+      font-size: 2rem;
     }
 
     @include u.forDesktop {
-      font-size: 28px;
+      font-size: 2.8rem;
       position: absolute;
-      top: -70px;
-      left: 45px;
+      top: 5%;
+      left: 10%;
     }
 
     strong {
@@ -56,8 +50,7 @@
 .destination__text__wrapper {
 
   .destination__nav {
-    height: 30px;
-    width: 250px;
+    width: fit-content;
     margin: 0 auto 20px auto;
 
     @include u.forDesktop {
@@ -75,6 +68,8 @@
         cursor: pointer;
 
         button {
+          padding-bottom: 10px;
+          color: white;
           cursor: pointer;
           background: none;
           border: none;
@@ -91,6 +86,7 @@
 
     // Div w/ Main Text: System Name and Description
     .destination__text {
+      min-height: 222px;
       text-align: center;
       margin-bottom: 32px;
 
@@ -120,14 +116,14 @@
 
       p {
         font-family: u.$barlow;
-        line-height: 25px;
+        line-height: 2.5rem;
         color: u.$purple;
-        font-size: 16px;
+        font-size: 1.6rem;
         margin-bottom: 32px;
 
         @include u.forDesktop {
-          font-size: 18px;
-          line-height: 32px;
+          font-size: 1.8rem;
+          line-height: 3.2rem;
           margin-bottom: 54px;
         }
       }
@@ -144,6 +140,11 @@
       @include u.flexCenter--column;
 
       @include u.forTablet {
+        align-items: flex-start;
+        flex-direction: row;
+      }
+
+      @include u.forDesktop {
         flex-direction: row;
       }
 
@@ -155,7 +156,7 @@
           font-family: u.$barlowC;
           font-weight: 400;
           letter-spacing: 2.4px;
-          line-height: 17px;
+          line-height: 1.7rem;
           text-align: center;
           color: u.$purple;
           margin-bottom: 12px;
@@ -168,8 +169,8 @@
         p {
           font-family: u.$belle;
           font-weight: 400;
-          font-size: 32px;
-          line-height: 32px;
+          font-size: 3.2rem;
+          line-height: 3.2rem;
           text-align: center;
 
           @include u.forDesktop {

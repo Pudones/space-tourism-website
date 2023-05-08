@@ -11,24 +11,29 @@ $purple: #D0D6F9;
 $white: #FFFFFF;
 
 // Preset Sizes
-$fs14: 14px;
-$fs16: 16px;
-$fs28: 28px;
-$fs32: 32px;
-$fs56: 56px;
-$fs100: 100px;
-$fs150: 150px;
+$fs14: 1.4rem;
+$fs16: 1.6rem;
+$fs18: 1.8rem;
+$fs20: 2rem;
+$fs24: 2.4rem;
+$fs28: 2.8rem;
+$fs32: 3.2rem;
+$fs56: 5.6rem;
+$fs80: 8rem;
+$fs100: 10rem;
+$fs150: 15rem;
 
 $fontSizes: (
-  "fs14": 14px,
-  "fs16": 16px,
-  "fs24": 24px,
-  "fs28": 28px,
-  "fs32": 32px,
-  "fs56": 56px,
-  "fs80": 80px,
-  "fs100": 100px,
-  "fs150": 150px
+  "fs14": 1.4rem,
+  "fs16": 1.6rem,
+  "fs18": 1.8rem,
+  "fs24": 2.4rem,
+  "fs28": 2.8rem,
+  "fs32": 3.2rem,
+  "fs56": 5.6rem,
+  "fs80": 8rem,
+  "fs100": 10rem,
+  "fs150": 15rem
 );
 
 $sizes: (

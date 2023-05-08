@@ -18,16 +18,16 @@
 }
 
 @mixin forDesktop {
-  @media (min-width: 1024px) {
+  @media (min-width: 1024px) /* 1024px */ {
     @content;
   }
 }
 
-@mixin forLandscape--mobile {
-  @media (max-width: 900px) and (orientation: landscape) {
-    @content;
-  }
-} 
+// @mixin forLandscape--mobile {
+//   @media (max-width: 900px) /* 900px */ and (orientation: landscape) {
+//     @content;
+//   }
+// } 
 
 @mixin rotateCenter {
   animation-name: rotate-center;

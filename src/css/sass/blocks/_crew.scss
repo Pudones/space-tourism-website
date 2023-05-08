@@ -1,0 +1,168 @@
+@use '../utils' as u;
+
+.crew__carousel__item {
+  @include u.flexCenter--column;
+  width: 100%;
+  gap: 1.5rem;
+
+  @include u.forTablet {
+    justify-content: flex-start;
+  }
+
+  @include u.forDesktop {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 32.5rem);
+    gap: 0;
+  }
+
+  .crew__about {
+    // height of the text box, so it doesn't feel "jumpy" when changing the slide.
+    min-height: 30vh;
+    max-width: 50ch;
+    order: 2;
+
+    @include u.forTablet {
+      min-height: 25vh;
+      max-width: 55ch;
+      order: 0;
+    }
+
+    @include u.forDesktop {
+      max-width: fit-content;
+      min-height: auto;
+      order: 0;
+    }
+
+    h3 {
+      margin-bottom: 1rem;
+      color: #85868a;
+
+      @include u.forTablet {
+        font-size: 2.4rem;
+      }
+
+      @include u.forDesktop {
+        text-align: left;
+        font-size: 3.2rem;
+      }
+    }
+
+    h2 {
+      margin-bottom: 1.2rem;
+
+      @include u.forTablet {
+        font-size: 4rem;
+      }
+
+      @include u.forDesktop {
+        text-align: left;
+        font-size: 5.6rem;
+      }
+    }
+
+    p {
+      @include u.forTablet {
+        font-size: 1.8rem;
+      }
+
+      @include u.forDesktop {
+        text-align: left;
+        max-width: 40rem;
+      }
+    }
+  }
+
+  .carousel__dots__wrapper {
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    gap: 10px;
+    order: 1;
+
+    @include u.forTablet {
+      order: 2;
+    }
+
+    @include u.forDesktop {
+      justify-content: flex-start;
+      order: 3;
+      // grid-column-start: 1;
+      // grid-column-end: 2;
+    }
+
+    button {
+      background: transparent;
+      width: 48px;
+      height: 48px;
+      border: none;
+      cursor: pointer;
+      // border: 1px solid white;
+
+      &:before {
+        content: '';
+        display: block;
+        margin: 0 auto;
+        border-radius: 50%;
+        background-color: #45474f;
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+
+  .crew__image {
+    display: flex;
+    order: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    width: 100%;
+    // background: red;
+
+    @include u.forTablet {
+      order: 2;
+      position: relative;
+      border: none;
+
+      // Same height as the image on tablet version, so it don't overlap any element.
+      height: 500px;
+    }
+
+    @include u.forDesktop {
+      border: none;
+      position: unset;
+    }
+
+    img {
+      width: 250px;
+      height: 300px;
+      margin: 0 auto;
+
+      @include u.forTablet {
+        width: 400px;
+        
+        // Same height as the invisible div on tablet version, so it don't overlap any element.
+        height: 500px;
+
+        position: absolute;
+        bottom: -7vh;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      @include u.forDesktop {
+        width: 525px;
+        height: 650px;
+
+        position: absolute;
+        bottom: 0;
+        left: 75%;
+      }
+    }
+  }
+
+}
+
+// Modifiers
+button.--activeDot.--activeDot::before {
+  background-color: white;
+}

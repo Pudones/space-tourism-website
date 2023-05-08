@@ -4,6 +4,13 @@
   text-align: center;
 }
 
+.regular {
+  font-weight: 400;
+}
+.bold {
+  font-weight: 700;
+}
+
 @each $sizeName, $size in variables.$sizes {
   .pad#{$sizeName} {
     padding: $size;
@@ -14,6 +21,13 @@
 @each $sizeName, $size in variables.$sizes {
   .mt#{$sizeName} {
     margin-top: $size;
+  }
+}
+
+// Margin Right
+@each $sizeName, $size in variables.$sizes {
+  .mr#{$sizeName} {
+    margin-right: $size;
   }
 }
 
@@ -44,6 +58,14 @@
   padding: 24px;
 }
 
+.grid-row-span-2 {
+  grid-row: span 2;
+}
+
+.grid-col-span-2 {
+  grid-column: span 2;
+}
+
 // Text Colors
 .color-purple {
   color: variables.$purple;
@@ -51,5 +73,5 @@
 
 // Line Height
 .lh25 {
-  line-height: 25px;
+  line-height: 2.5rem;
 }

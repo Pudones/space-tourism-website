@@ -1,7 +1,18 @@
+@use '../utils' as u;
+
 .regular-text {
   font-family: 'Barlow';
+  font-size: 1.6rem;
 }
 
 .regular-text--condensed {
   font-family: 'BarlowCondensed';
 }
+
+.regular-text--p {
+  font-family: 'Barlow';
+  line-height: 2.5rem;
+  text-align: center;
+  color: u.$purple;
+}
+

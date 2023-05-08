@@ -1,51 +1,75 @@
 @use '../utils' as u;
 
-
-.home__text {
-  width: 360px;
-  min-height: 320px;
+.home__text__wrapper {
 
   @include u.forTablet {
-    width: 500px;
-    height: 400px;
+    max-width: 700px;
   }
 
   @include u.forDesktop {
-    position: absolute;
-    top: 25%;
-    left: 0;
+    max-width: 70ch;
   }
+
+  .home__text {
+
+    h5 {
+      @include u.forDesktop {
+        font-size: 2.8rem;
+      }
+    }
+
+    h2 {
+      font-size: 8rem;
+
+      @include u.forTablet {
+        font-size: 15rem;
+      }
+
+      @include u.forDesktop {
+        font-size: 15rem;
+      }
+
+    }
+
+    p {
+      @include u.forTablet {
+        margin: 0 auto;
+        max-width: 70%;
+      }
+
+      @include u.forDesktop {
+        font-size: 1.8rem;
+        max-width: 100%;
+      }
+    }
+  }
+
 }
 
 .home__explore__link {
   @include u.flexCenter;
+  width: 15rem;
+  height: 15rem;
   background: u.$white;
-  font-size: 20px;
-  font-family: 'Bellefair';
+  font-size: 2rem;
   text-decoration: none;
   color: u.$dark;
-  width: 150px;
-  height: 150px;
   border-radius: 50%;
   transition: .5s;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  cursor: pointer;
 
   &:hover {
     box-shadow: 0 0 0 50px rgba(255, 255, 255, 0.1);
   }
 
   @include u.forTablet {
-    width: 200px;
-    height: 200px;
+    width: 20rem;
+    height: 20rem;
   }
 
   @include u.forDesktop {
-    position: absolute;
-    top: 40%;
-    left: 75%;
-    width: 250px;
-    height: 250px;
-    font-size: 32px;
+    width: 25rem;
+    height: 25rem;
+    font-size: 3.2rem;
   }
 }
