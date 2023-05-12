@@ -55,3 +55,18 @@ body {
     position: relative;
   }
 }
+
+.tech__body {
+  background-image: url(../../assets/technology/background-technology-mobile.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  @include u.forTablet {
+    background-image: url(../../assets/technology/background-technology-tablet.jpg);
+  }
+
+  @include u.forDesktop{
+    background-image: url(../../assets/technology/background-technology-desktop.jpg);
+  }
+}

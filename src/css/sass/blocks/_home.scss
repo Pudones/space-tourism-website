@@ -13,6 +13,9 @@
   .home__text {
 
     h5 {
+      @include u.forTablet {
+        font-size: 2rem;
+      }
       @include u.forDesktop {
         font-size: 2.8rem;
       }

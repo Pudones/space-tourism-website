@@ -1,21 +1,7 @@
 @use '../utils' as u;
 
 // Section Heading, refers to the Title at the beginning of the page that informs which page and number is it. Example: 01 Destination
-.section__heading {
-  font-family: u.$barlowC;
-  font-size: 1.6rem;
-  font-weight: 400;
-  letter-spacing: 2.7px;
-  line-height: 1.9rem;
-  text-align: center;
-  margin-bottom: 32px;
-}
-.section__heading__number {
-  opacity: 0.5;
-  margin-right: 18px;
-}
-
-.crew__heading__container {
+.section__heading__container {
   @include u.flexCenter--column;
   max-width: 1280px;
   width: 100%;
@@ -25,7 +11,12 @@
     justify-content: flex-start;
   }
 
-  .crew__heading {
+  .section__heading {
+    font-family: u.$barlowC;
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: 2.7px;
+    line-height: 1.9rem;
     margin-bottom: 0;
     text-align: initial;
 
@@ -35,6 +26,11 @@
 
     @include u.forDesktop {
       font-size: 2.8rem;
+    }
+
+    .section__heading__number {
+      opacity: 0.5;
+      margin-right: 18px;
     }
   }
 }
@@ -67,10 +63,6 @@
 
 .heading5 {
   font-family: 'BarlowCondensed';
-  font-size: 1.6rem;
-  letter-spacing: 2.75px;
-
-  @include u.forTablet {
-    font-size: 2rem;
-  }
+  letter-spacing: 0.275rem;
+  color: u.$purple;
 }
