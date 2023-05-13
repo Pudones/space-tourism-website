@@ -50,6 +50,10 @@
   min-height: calc(100vh - 12vh);
   gap: 3rem;
 
+  @include u.forDesktop {
+    gap: 0;
+  }
+
   .crew__main__container {
     @include u.flexCenter--column;
     width: 100%;
@@ -100,7 +104,7 @@
     }
 
     .tech__container {
-      grid-column: 2/5;
+      grid-column: 2/6;
       grid-row: 2/4;
     }
   }

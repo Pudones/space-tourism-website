@@ -75,9 +75,9 @@
 
   .carousel__dots__wrapper {
     display: flex;
-    height: 50px;
     justify-content: center;
-    gap: 10px;
+    height: 5rem;
+    gap: 1rem;
     order: 1;
 
     @include u.forTablet {
@@ -87,17 +87,14 @@
     @include u.forDesktop {
       justify-content: flex-start;
       order: 3;
-      // grid-column-start: 1;
-      // grid-column-end: 2;
     }
 
     button {
       background: transparent;
-      width: 48px;
-      height: 48px;
+      width: 4.8rem;
+      height: 4.8rem;
       border: none;
       cursor: pointer;
-      // border: 1px solid white;
 
       &:before {
         content: '';
@@ -105,8 +102,8 @@
         margin: 0 auto;
         border-radius: 50%;
         background-color: #45474f;
-        width: 15px;
-        height: 15px;
+        width: 1.5rem;
+        height: 1.5rem;
       }
     }
   }
@@ -116,7 +113,6 @@
     order: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.25);
     width: 100%;
-    // background: red;
 
     @include u.forTablet {
       order: 2;
